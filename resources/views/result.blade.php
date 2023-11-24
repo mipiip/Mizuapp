@@ -11,3 +11,8 @@
     <h1>結果</h1>
     
     <p>{{ $result }}</p>
+    
+    <a href="/ranking">ランキング表示</a>
+    
+    </body>
+</html>
