@@ -12,7 +12,7 @@
     
     <p>{{ $result }}</p>
     
-    <a href="/ranking">ランキング表示</a>
+    <a href="/mypage">マイページへ</a>
     
     </body>
 </html>
