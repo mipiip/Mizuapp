@@ -8,7 +8,9 @@
     </head>
     <body>
         
-    <h1>ランキング</h1>
+    <p></p>
+        
+    <h1>マイページ</h1>
     
     <table>
         <thead>
@@ -18,13 +20,6 @@
                 <tr>総合得点</tr>
             </tr>
         </thead>
-        @foreach($rankings as $ranking)
-            <tr>
-                <td>{{ $ranking->id }}</td>
-                <td>{{ $ranking->name }}</td>
-                <td>{{ $ranking->total_score }}</td>
-            </tr>
-        @endforeach
     </table>
     </body>
 </html>

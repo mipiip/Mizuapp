@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Question;
 use App\Models\Score;
 use App\Models\User;
-use App\Models\Ranking;
+use App\Models\Mypage;
 
 class QuestionController extends Controller
 {
@@ -58,7 +58,9 @@ class QuestionController extends Controller
         return view ('result')->with(['result' => $correct_count]);
     }
     
-    public function ranking(){
+    public function mypage()
+    {
+        return view('mypage');
             
         }
 }
