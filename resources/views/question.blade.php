@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
+        <meta name="csrf-token" content="{{ $token }}">
         <title>Conjugaison du verbe</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -48,6 +49,21 @@
                     }
                 }
             });
+            
+            document.addEventListener('DOMContentLoaded', function () {
+            var token = '{{ $token }}';
+            if (window.history && window.history.pushState) {
+                window.history.pushState(null, null, window.location.href);
+                window.addEventListener('popstate', function () {
+                    window.history.pushState(null, null, window.location.href);
+                    // トークンの一致チェック
+                    if (token !== '{{ $token }}') {
+                        // トークンが一致しない場合、アクションを実行（例: アラート表示）
+                        alert('Invalid back action');
+                    }
+                });
+            }
+        });
         </script>
     </body>
 </html>

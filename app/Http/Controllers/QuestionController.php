@@ -15,7 +15,11 @@ class QuestionController extends Controller
     public function index(Question $question) {
        //questionsテーブルからランダムに3問問題を持ってくる
        $randomQuestions = Question::inRandomOrder()->limit(3)->get();
-       return view ('question')->with(['questions' => $randomQuestions]);
+       
+       $token = uniqid();
+       
+       return view ('question')->with(['questions' => $randomQuestions, 'token'=> $token]);
+       
     }
     
     public function store(Request $request, Score $score) {
@@ -31,6 +35,9 @@ class QuestionController extends Controller
         $score = new Score();
         
         $type = ["je","tu", "il/elle", "nous", "vous", "ils/elles"];
+        
+        $questions = [];
+        
         // ユーザーの回答分、ループさせて、正誤判定を行う。
         // $iはループの番号。0 1 2 3...
         foreach($user_answers as $i => $answer) {
@@ -47,6 +54,11 @@ class QuestionController extends Controller
             if($get_question[$type[$type_index]] === $answer) {
                 $correct_count += 1;
             }
+            
+        $questions []= [
+            'question' => $type[$type_index],
+            'answer' => $get_question->{$type[$type_index]},
+            ];
         }
         
         $score->user_id = Auth::id();
@@ -55,12 +67,19 @@ class QuestionController extends Controller
        
         $score->save();
         
-        return view ('result')->with(['result' => $correct_count]);
+        return view ('result')->with(['result' => $correct_count, 'questions' => $questions, 'user_answers'=> $user_answers]);
     }
     
     public function mypage()
     {
-        return view('mypage');
+        $userId = Auth::user()->id;
+        $username = Auth::user()->name;
+        $totalScore = Score::where('user_id', $userId)->sum('score');
+        
+        return view('mypage')->with('username', $username)->with('totalScore', $totalScore);
+        
             
         }
+        
+    
 }
