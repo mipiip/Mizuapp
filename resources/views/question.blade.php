@@ -50,20 +50,26 @@
                 }
             });
             
-            document.addEventListener('DOMContentLoaded', function () {
-            var token = '{{ $token }}';
-            if (window.history && window.history.pushState) {
-                window.history.pushState(null, null, window.location.href);
-                window.addEventListener('popstate', function () {
-                    window.history.pushState(null, null, window.location.href);
-                    // トークンの一致チェック
-                    if (token !== '{{ $token }}') {
-                        // トークンが一致しない場合、アクションを実行（例: アラート表示）
-                        alert('Invalid back action');
-                    }
-                });
-            }
-        });
+            window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+        // ブラウザの戻るボタンが押されたときにページを再読み込み
+        window.location.reload();
+    }
+});
+            // document.addEventListener('DOMContentLoaded', function () {
+            // var token = '{{ $token }}';
+            // if (window.history && window.history.pushState) {
+            //     window.history.pushState(null, null, window.location.href);
+            //     window.addEventListener('popstate', function () {
+            //         window.history.pushState(null, null, window.location.href);
+            //         // トークンの一致チェック
+            //         if (token !== '{{ $token }}') {
+            //             // トークンが一致しない場合、アクションを実行（例: アラート表示）
+            //             alert('Invalid back action');
+            //         }
+            //     });
+            // }
+            // });
         </script>
     </body>
 </html>

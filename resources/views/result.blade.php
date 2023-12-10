@@ -13,14 +13,29 @@
     <h2>正解数：{{ $result }}</h2>
     
     <h3>解答</h3>
-    @foreach ($questions as $index => $q)
-     <p> {{ $q['question'] }}</p>
-     <p>あなたの回答：{{ $user_answers[$index] }}</p>
-     <p>正解：{{ $q['answer'] }}</p>
-     
-    @endforeach
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>問題</th>
+            <th>あなたの回答</th>
+            <th>正解</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach ($questions as $index => $q)
+                <tr>
+                    <td>{{ $q['question'] }}</td>
+                    <td>{{ $user_answers[$index] }}</td>
+                    <td>{{ $q['answer'] }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
     
-    <a href="/mypage">マイページへ</a>
+    <div style= "margin-top: 20px;">
+        <a href="/mypage">マイページへ</a
+    </div>
     
     </body>
 </html>
