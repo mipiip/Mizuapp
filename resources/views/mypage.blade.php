@@ -14,6 +14,13 @@
     
     <p>総合得点： {{ $totalScore }}</p>
     
+    <p>ランキング</p>
+     
+    <p>過去に間違えた問題</p>
+    
+    <p></p>
+    <p></p>
+    
     <script>
         window.onload = function() {
   history.pushState(null, null, null);

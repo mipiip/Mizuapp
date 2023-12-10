@@ -16,3 +16,4 @@ class Question extends Model
         'answer',
     ];
 }
+
