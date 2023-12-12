@@ -32,6 +32,8 @@
                  <!--<input type="text" name="user_answer[]"/> -->
                  @endforeach
                  
+            <p>アクサン・特殊文字{â î ê ô é è à ù ç œ}</p>
+            
             <p>*未回答の問題がある場合は未入力パスボタンを押してから回答終了してください*</p>
             
             <button id="passBtn" type="button">未入力パス</button>

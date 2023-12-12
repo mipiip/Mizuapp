@@ -19,5 +19,6 @@ class Score extends Model
         'user_id',
         'score',
         'correct_count',
+        'total_score'
     ];
 }
