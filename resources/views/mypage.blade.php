@@ -14,13 +14,16 @@
     
     <p>総合得点： {{ $totalScore }}</p>
     
-    <p>ランキング</p>
-     
-    <p>過去に間違えた問題</p>
+    <div>
+    <h2>ランキング</h2>
     
-    <p></p>
-    <p></p>
-    
+    @foreach($rankingData as $rank)
+        <p>
+            あなたの順位: {{ $rank->rank }} / {{ count($rankingData) }}
+        </p>
+    @endforeach
+    </div>
+
     <script>
         window.onload = function() {
   history.pushState(null, null, null);

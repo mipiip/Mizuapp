@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('group_id')->constrained();
             $table->string('question', 100);
-            $table->string('je', 20);
-            $table->string('tu', 20);
-            $table->string('il/elle', 20);
-            $table->string('nous', 20);
-            $table->string('vous', 20);
-            $table->string('ils/elles', 20);
+            $table->string('je', 50);
+            $table->string('tu', 50);
+            $table->string('il/elle', 50);
+            $table->string('nous', 50);
+            $table->string('vous', 50);
+            $table->string('ils/elles', 50);
             $table->timestamps();
         });
     }

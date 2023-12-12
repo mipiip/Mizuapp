@@ -70,16 +70,33 @@ class QuestionController extends Controller
         return view ('result')->with(['result' => $correct_count, 'questions' => $questions, 'user_answers'=> $user_answers]);
     }
     
+    public function getRankingData()
+{
+    // トータルスコアが高い順にユーザーを取得
+    $rankingData = DB::table('rankings')
+        ->join('users', 'rankings.user_id', '=', 'users.id')
+        ->select('users.name as user_name', 'rankings.total_score')
+        ->orderByDesc('rankings.total_score')
+        ->get();
+
+    // 順位を計算しrankカラムにセット
+    $rank = 1;
+    foreach ($rankingData as $item) {
+        $item->rank = $rank++;
+    }
+    
+    return $rankingData;
+}
+
     public function mypage()
     {
         $userId = Auth::user()->id;
         $username = Auth::user()->name;
+        $rankingData = $this->getRankingData();
         $totalScore = Score::where('user_id', $userId)->sum('score');
         
-        return view('mypage')->with('username', $username)->with('totalScore', $totalScore);
-        
-            
-        }
+        return view('mypage')->with('username', $username)->with('totalScore', $totalScore)->with('rankingData', $rankingData);
+    }
         
     
 }
