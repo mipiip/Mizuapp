@@ -18,6 +18,7 @@
         <thead>
         <tr>
             <th>問題</th>
+            <th>人称</th>
             <th>あなたの回答</th>
             <th>正解</th>
         </tr>
@@ -26,6 +27,7 @@
             @foreach ($questions as $index => $q)
                 <tr>
                     <td>{{ $q['question'] }}</td>
+                    <td>{{ $q['type'] }}</td>
                     <td>{{ $user_answers[$index] }}</td>
                     <td>{{ $q['answer'] }}</td>
                 </tr>

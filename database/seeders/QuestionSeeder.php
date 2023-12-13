@@ -232,7 +232,7 @@ class QuestionSeeder extends Seeder
                 'il/elle' => 'était allé',
                 'nous' => 'étions allés',
                 'vous' => 'étiez allés',
-                'ils/elles' =>'était allés', 
+                'ils/elles' =>'étaient allés', 
                 'group_id'=> 1,
                 'created_at' => Carbon::now(),
                 //'updated_at' => Carbon::now(),

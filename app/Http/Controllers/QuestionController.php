@@ -25,10 +25,8 @@ class QuestionController extends Controller
     public function store(Request $request, Score $score) {
         // questionsテーブルのidが何番の問題を解いたのかというデータ。
         $question_ids =  $request->question_id; // [1, 2, 3]
-        //dd($question_ids);
         // ユーザーが回答した内容のデータ
         $user_answers = $request->user_answer; // ['ans1', 'ans2', 'ans3']
-        //dd($jeAnswer = $request->input('je.user_answer'));
         // 正解数の初期値
         $correct_count = 0;
         
@@ -56,7 +54,8 @@ class QuestionController extends Controller
             }
             
         $questions []= [
-            'question' => $type[$type_index],
+            'question' => $get_question->question,
+            'type'=> $type[$type_index],
             'answer' => $get_question->{$type[$type_index]},
             ];
         }
@@ -71,31 +70,31 @@ class QuestionController extends Controller
     }
     
     public function getRankingData()
-{
-    // トータルスコアが高い順にユーザーを取得
-    $rankingData = DB::table('rankings')
-        ->join('users', 'rankings.user_id', '=', 'users.id')
-        ->select('users.name as user_name', 'rankings.total_score')
-        ->orderByDesc('rankings.total_score')
+    {
+    // スコアの合計が高い順にランキングを取得
+    $rankings = User::with('scores')
+        ->withCount('scores as total_score')
+        ->orderByDesc('total_score')
         ->get();
 
-    // 順位を計算しrankカラムにセット
-    $rank = 1;
-    foreach ($rankingData as $item) {
-        $item->rank = $rank++;
+    return $rankings;
     }
-    
-    return $rankingData;
-}
 
     public function mypage()
     {
-        $userId = Auth::user()->id;
-        $username = Auth::user()->name;
+        $user = Auth::user();
+
+        $username = $user->name;
         $rankingData = $this->getRankingData();
-        $totalScore = Score::where('user_id', $userId)->sum('score');
+        $totalScore = Score::where('user_id', $user->id)->sum('score');
+        // ログインしているユーザーの順位を取得
+        $userRank = $rankingData->search(function ($rankData) use ($user) {
+            
+            return $rankData->id === $user->id;
+        }) + 1; 
         
-        return view('mypage')->with('username', $username)->with('totalScore', $totalScore)->with('rankingData', $rankingData);
+        
+        return view('mypage')->with(['username' => $username, 'totalScore' => $totalScore, 'rankingData' => $rankingData, 'userRank' => $userRank]);
     }
         
     

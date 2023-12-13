@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->integer('score');
+            $table->integer('total_score')->default(0);
             $table->timestamps();
         });
     }

@@ -15,14 +15,16 @@
     <p>総合得点： {{ $totalScore }}</p>
     
     <div>
-    <h2>ランキング</h2>
-    
-    @foreach($rankingData as $rank)
-        <p>
-            あなたの順位: {{ $rank->rank }} / {{ count($rankingData) }}
-        </p>
-    @endforeach
+        あなたの順位: {{ $userRank }} / {{ count($rankingData) }}
     </div>
+    
+    <div>
+        @foreach($rankingData as $rank)
+        <p>{{ $rank->name }}</p>
+        @endforeach
+    </div>
+    
+    <a href="/questions">もう一度問題を解く</a>
 
     <script>
         window.onload = function() {
