@@ -5,6 +5,7 @@
         <title>Conjugaison du verbe</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     </head>
     <body>
         <h1>Conjugaison du verbe</h1>
