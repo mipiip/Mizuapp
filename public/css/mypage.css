@@ -1,0 +1,61 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* タイトルのスタイル */
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* ユーザー情報のスタイル */
+p {
+    color: #555;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* 総合得点のスタイル */
+#totalScore {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* 順位表示のスタイル */
+#userRank {
+    margin-top: 10px;
+}
+
+/* ランキングデータのスタイル */
+#rankingData {
+    margin-top: 20px;
+}
+
+/* ランキングデータの各項目のスタイル */
+.rankItem {
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* もう一度問題を解くリンクのスタイル */
+a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #45a049;
+}

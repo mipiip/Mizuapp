@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     </head>
     <body>
-        <h1>Conjugaison du verbe</h1>
+        <h1>PetitVerbe</h1>
         
         <h2>フランス語の動詞活用練習</h2>
             
