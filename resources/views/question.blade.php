@@ -6,10 +6,14 @@
         <title>Conjugaison du verbe</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/question.css') }}">
     </head>
     <body>
         <div>
-            <h1>指示に従って適切に活用した動詞を入力してください。</h1>
+            <h1>それぞれ適切に活用した動詞を入力してください。</h1>
             
             <form action="/questions/store" method="post">
                 @csrf
@@ -28,8 +32,6 @@
                  <input class="answer_input" type="text" name="user_answer[]" required/><br/> 
                  <label>Ils/Elles</label>
                  <input class="answer_input" type="text" name="user_answer[]" required/> 
-                 <!--<label>Tu(T`) </label>-->
-                 <!--<input type="text" name="user_answer[]"/> -->
                  @endforeach
                  
             <p>アクサン・特殊文字{â î ê ô é è à ù ç œ}</p>
@@ -53,25 +55,11 @@
             });
             
             window.addEventListener('pageshow', function (event) {
-    if (event.persisted) {
-        // ブラウザの戻るボタンが押されたときにページを再読み込み
-        window.location.reload();
-    }
-});
-            // document.addEventListener('DOMContentLoaded', function () {
-            // var token = '{{ $token }}';
-            // if (window.history && window.history.pushState) {
-            //     window.history.pushState(null, null, window.location.href);
-            //     window.addEventListener('popstate', function () {
-            //         window.history.pushState(null, null, window.location.href);
-            //         // トークンの一致チェック
-            //         if (token !== '{{ $token }}') {
-            //             // トークンが一致しない場合、アクションを実行（例: アラート表示）
-            //             alert('Invalid back action');
-            //         }
-            //     });
-            // }
-            // });
+                 if (event.persisted) {
+             // ブラウザの戻るボタンが押されたときにページを再読み込み
+            window.location.reload();
+            }
+            });
         </script>
     </body>
 </html>
