@@ -1,0 +1,63 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* タイトルのスタイル */
+h1 {
+    font-family: 'Zen Maru Gothic', serif;
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* ユーザー情報のスタイル */
+p {
+    font-family: 'Zen Maru Gothic', serif;
+    color: #555;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* 総合得点のスタイル */
+#totalScore {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* 順位表示のスタイル */
+#userRank {
+    font-family: 'Zen Maru Gothic', serif;
+    margin-top: 10px;
+}
+
+/* ランキングデータのスタイル */
+#rankingData {
+    margin-top: 20px;
+}
+
+/* ランキングデータの各項目のスタイル */
+.rankItem {
+    font-family: 'Zen Maru Gothic', serif;
+    color: #333;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+a {
+    display: inline-block;
+    background-color: #5584ac;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #E98FB5;
+}
