@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('group_id')->constrained();
             $table->string('question', 100);
             $table->string('je', 50);
             $table->string('tu', 50);
