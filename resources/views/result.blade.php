@@ -22,7 +22,7 @@
         <thead>
         <tr>
             <th>問題</th>
-            <th>人称</th>
+            <th>主格代名詞</th>
             <th>あなたの回答</th>
             <th>正解</th>
         </tr>
@@ -40,7 +40,7 @@
         </tbody>
     </table>
         
-    <a href="/mypage">マイページへ</a
+    <a href="/mypage">マイページへ</a>
     
     </body>
 </html>
