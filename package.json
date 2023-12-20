@@ -2,11 +2,7 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-<<<<<<< HEAD
-        "build": "vite build", 
-=======
         "build": "vite build",
->>>>>>> d3cfc69e8530749d64c50e81acb8e35ffd509894
         "heroku-postbuild": "npm run build"
     },
     "devDependencies": {

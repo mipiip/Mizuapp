@@ -16,7 +16,7 @@ class QuestionSeeder extends Seeder
      */
     public function run()
     { 
-        
+
         DB::table('questions')->insert([
                             
 
@@ -896,6 +896,7 @@ class QuestionSeeder extends Seeder
                // 'updated_at' => Carbon::now(),
             ]
         ]);
+
 
     }
 }
