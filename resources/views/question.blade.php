@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ $token }}">
-        <title>Conjugaison du verbe</title>
+        <title>PetitVerbe</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">

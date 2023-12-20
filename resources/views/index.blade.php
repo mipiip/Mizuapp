@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Conjugaison du verbe</title>
+        <title>PetitVerbe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- Fonts -->
@@ -23,6 +23,6 @@
         
             
         <a href="/questions">START</a>
-        <a href="/mypage">マイページ</a
+        <a href="/mypage">マイページ</a>
     </body>
 </html>
