@@ -6,52 +6,50 @@ body {
     text-align: center;
 }
 
-/* タイトルのスタイル */
 h1 {
     color: #333;
     font-size: 36px;
     margin-top: 20px;
 }
 
-/* 正解数の表示スタイル */
 h2 {
-    color: #4CAF50;
+    color: #5584ac;
     font-size: 24px;
     margin-top: 10px;
 }
 
-/* テーブルのスタイル */
 table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
 }
 
-/* テーブルのヘッダーのスタイル */
 thead {
     background-color: #333;
     color: #fff;
 }
 
-/* テーブルのセルのスタイル */
 td, th {
+    font-family: 'Zen Maru Gothic', serif;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-/* マイページへのリンクのスタイル */
 a {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #5584ac;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
 }
 
 a:hover {
-    background-color: #45a049;
+    background-color: #E98FB5;
+}
+
+div {
+    margin-top: 20px;
 }

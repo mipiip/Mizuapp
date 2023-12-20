@@ -1,5 +1,5 @@
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Zen Maru Gothic', serif;
     background-color: #f7f7f7;
     display: flex;
     justify-content: center;
@@ -19,61 +19,49 @@ div {
 
  タイトルのデザイン 
 h1 {
-    color: #ff66b2;
+    font-family: 'Zen Maru Gothic', serif;
+    color: #3c3c3c;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
  問題文のスタイル 
 p {
+    font-family: 'Zen Maru Gothic', serif;
     color: #333;
-    font-size: 18px;
+    font-size: 60px;
     margin: 10px 0;
 }
 
  回答入力欄のスタイル 
 .answer_input {
     margin: 5px 0;
-    padding: 10px;
-    border: 2px solid #ff66b2;
     border-radius: 5px;
     width: 80%;
 }
 
- アクサンや特殊文字のスタイル 
+ アクサン・特殊文字のスタイル 
 .special-characters {
     margin-top: 10px;
     color: #888;
     font-size: 14px;
 }
 
- 未回答パスボタンのデザイン 
-#passBtn {
-    background-color: #66ccff;
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #5584ac;
     color: #fff;
+    text-decoration: none;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
 }
 
 #passBtn:hover {
     background-color: #3399cc;
 }
 
- 回答終了ボタンのデザイン 
-button[type="submit"] {
-    background-color: #66cc66;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-}
-
 button[type="submit"]:hover {
-    background-color: #339933;
+    background-color: #E98FB5;
 }

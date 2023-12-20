@@ -6,6 +6,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/result.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
     
@@ -24,6 +27,7 @@
             <th>正解</th>
         </tr>
         </thead>
+        
         <tbody>
             @foreach ($questions as $index => $q)
                 <tr>
@@ -35,10 +39,8 @@
             @endforeach
         </tbody>
     </table>
-    
-    <div style= "margin-top: 20px;">
-        <a href="/mypage">マイページへ</a
-    </div>
+        
+    <a href="/mypage">マイページへ</a
     
     </body>
 </html>

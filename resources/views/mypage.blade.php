@@ -6,6 +6,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/mypage.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
         
@@ -25,17 +28,17 @@
         @endforeach
     </div>
     
-    <a href="/questions">もう一度問題を解く</a>
+    <a href="/questions">問題を解く</a>
 
     <script>
         window.onload = function() {
-  history.pushState(null, null, null);
+        history.pushState(null, null, null);
 
-  window.addEventListener("popstate", function (e) {
-    history.pushState(null, null, null);
-    return;
-  });
-};
+        window.addEventListener("popstate", function (e) {
+        history.pushState(null, null, null);
+        return;
+        });
+    };
     </script>
     
     </body>
