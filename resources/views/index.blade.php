@@ -13,19 +13,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
-    <body>
-        
-        <div class="contents">
-            <body style="background-image: url({{ asset('images/test.jpg') }});">
+    <body style="background-image: url({{ asset('images/test.jpg') }});">
         <h1>PetitVerbe</h1>
-            
+        
         <h2>フランス語の動詞活用練習</h2>
-                
-        <h3>フランス語の習得には、動詞活用が欠かせません。繰り返し練習してフランス語の動詞活用練習をしましょう。</h3>
             
+        <h3>フランス語の習得には、動詞活用が欠かせません。繰り返し練習してフランス語の動詞活用練習をしましょう。</h3>
+        
+        
             
         <a href="/questions">START</a>
         <a href="/mypage">マイページ</a>
-        </div>
     </body>
 </html>
