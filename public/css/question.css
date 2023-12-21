@@ -55,7 +55,7 @@ button {
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 100vh;
 }
 
 #passBtn:hover {
