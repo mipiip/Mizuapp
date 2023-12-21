@@ -11,35 +11,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
+        <img src="images/wave.svg" alt="" class=section-header>
+        <div class="contents">
+        <h1>マイページ</h1>
         
-    <h1>マイページ</h1>
+        <p>ユーザー名：{{ $username }}</p>
+        
+        <p>総合得点： {{ $totalScore }}</p>
+        
+        <div>
+            あなたの順位: {{ $userRank }} / {{ count($rankingData) }}
+        </div>
+        
+        <div>
+            @foreach($rankingData as $rank)
+            <p>{{ $rank->name }}</p>
+            @endforeach
+        </div>
+        
+        <a href="/questions">問題を解く</a>
     
-    <p>ユーザー名：{{ $username }}</p>
+        <script>
+            window.onload = function() {
+            history.pushState(null, null, null);
     
-    <p>総合得点： {{ $totalScore }}</p>
-    
-    <div>
-        あなたの順位: {{ $userRank }} / {{ count($rankingData) }}
-    </div>
-    
-    <div>
-        @foreach($rankingData as $rank)
-        <p>{{ $rank->name }}</p>
-        @endforeach
-    </div>
-    
-    <a href="/questions">問題を解く</a>
-
-    <script>
-        window.onload = function() {
-        history.pushState(null, null, null);
-
-        window.addEventListener("popstate", function (e) {
-        history.pushState(null, null, null);
-        return;
-        });
-    };
-    </script>
-    
+            window.addEventListener("popstate", function (e) {
+            history.pushState(null, null, null);
+            return;
+            });
+        };
+        </script>
+        </div>
+        <img src="images/lowwave.svg" alt="" class=section-header>
     </body>
 </html>

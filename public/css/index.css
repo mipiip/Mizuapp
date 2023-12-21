@@ -1,5 +1,4 @@
-body {
-    background-color: #f9f9f9;
+.contents{
     margin: 0;
     padding: 0;
     display: flex;
@@ -36,7 +35,7 @@ a {
     background-color: #5584ac;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 100vh;
 }
 
 a:hover {
