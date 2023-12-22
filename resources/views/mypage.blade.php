@@ -24,8 +24,9 @@
         </div>
         
         <div>
-            @foreach($rankingData as $rank)
-            <p>{{ $rank->name }}</p>
+            <p>ランキング</p>
+            @foreach($rankingData->take(5) as $index => $rank)
+                <p>{{ $index + 1 }}位: {{ $rank->name }}</p>
             @endforeach
         </div>
         
