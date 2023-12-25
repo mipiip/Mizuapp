@@ -1,23 +1,23 @@
 body {
     font-family: 'Zen Maru Gothic', serif;
     background-color: #f7f7f7;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
- メインのコンテナ 
-div {
+
+.contents {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    margin: 0;
+    
 }
-
- タイトルのデザイン 
+ 
 h1 {
     font-family: 'Zen Maru Gothic', serif;
     color: #3c3c3c;
@@ -25,22 +25,21 @@ h1 {
     margin-bottom: 20px;
 }
 
- 問題文のスタイル 
+
 p {
     font-family: 'Zen Maru Gothic', serif;
     color: #333;
-    font-size: 60px;
+    font-size: 18px;
     margin: 10px 0;
 }
 
- 回答入力欄のスタイル 
+
 .answer_input {
     margin: 5px 0;
     border-radius: 5px;
     width: 80%;
 }
 
- アクサン・特殊文字のスタイル 
 .special-characters {
     margin-top: 10px;
     color: #888;
@@ -55,7 +54,7 @@ button {
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 100vh;
+    border-radius: 25px;
 }
 
 #passBtn:hover {
@@ -64,4 +63,10 @@ button {
 
 button[type="submit"]:hover {
     background-color: #E98FB5;
+}
+
+
+.question-form {
+    text-align: center;
+    width: 60%;
 }
