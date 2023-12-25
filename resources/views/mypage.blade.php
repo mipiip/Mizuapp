@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
     <body>
-        <img src="images/wave.svg" alt="" class=section-header>
+        <img src="images/wave.svg" alt="" class="section-header top-wave">
         <div class="contents">
         <h1>マイページ</h1>
         

@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="{{ asset('css/question.css') }}">
     </head>
     <body>
-        <div>
+        <div class="contents">
             <h1>それぞれ適切に活用した動詞を入力してください。</h1>
             
-            <form action="/questions/store" method="post">
+            <form class="question-form" action="/questions/store" method="post">
                 @csrf
                  @foreach($questions as $question)
                  <p>{{ $question->question }}</p>
