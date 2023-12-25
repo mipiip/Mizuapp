@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}"  enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -47,6 +47,12 @@
             <x-primary-button class="ml-4">
                 {{ __('Register') }}
             </x-primary-button>
+        </div>
+        
+        <!-- Name -->
+        <div>
+            <x-input-label for="profile_image" :value="__('プロフィール画像')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="file" name="profile_image" :value="old('profile_image')" required autofocus autocomplete="profile_image" />
         </div>
     </form>
 </x-guest-layout>

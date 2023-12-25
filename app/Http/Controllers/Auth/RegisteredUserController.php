@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Cloudinary;
 
 class RegisteredUserController extends Controller
 {
@@ -36,8 +37,10 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $image_url = Cloudinary::upload($request->file('profile_image')->getRealPath())->getSecurePath();
         $user = User::create([
             'name' => $request->name,
+            'profile_image_url' => $image_url,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
