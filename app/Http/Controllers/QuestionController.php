@@ -96,6 +96,25 @@ class QuestionController extends Controller
         
         return view('mypage')->with(['username' => $username, 'totalScore' => $totalScore, 'rankingData' => $rankingData, 'userRank' => $userRank]);
     }
-        
+    
+    public function image(Request $request, User $user)
+    {
+        $request->validate([
+            'profile_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $user = Auth::user();
+
+        if ($request->hasFile('profile_image')) {
+            $image = $request->file('profile_image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('profile_images'), $imageName);
+
+            $user->profile_image = $imageName;
+            $user->save();
+        }
+
+        return redirect()->route('profile.edit')->with('success', 'プロフィール画像がアップロードされました。');
+    }
     
 }

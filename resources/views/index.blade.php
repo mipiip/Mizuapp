@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     </head>
-    <body style="background-image: url({{ asset('images/test.jpg') }});">
+    <body style="background-image: url({{ asset('images/rennes_paysage.jpg') }});">
         <h1>PetitVerbe</h1>
         
         <h2>フランス語の動詞活用練習</h2>

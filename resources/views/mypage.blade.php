@@ -16,7 +16,12 @@
         <h1>マイページ</h1>
         
         <p>ユーザー名：{{ $username }}</p>
-        
+        <img src="{{ asset('profile_images/' . Auth::user()->profile_image) }}" alt="プロフィール画像">
+        @if(Auth::user()->profile_image)
+            <img src="{{ asset('profile_images/' . Auth::user()->profile_image) }}" alt="プロフィール画像">
+        @else
+            <img src="{{ asset('profile_images/default.jpg') }}" alt="デフォルト画像">
+        @endif
         <p>総合得点： {{ $totalScore }}</p>
         
         <div>
