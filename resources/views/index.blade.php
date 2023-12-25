@@ -24,5 +24,6 @@
             
         <a href="/questions">START</a>
         <a href="/mypage">マイページ</a>
+        <a href="/regster">ユーザー登録</a>
     </body>
 </html>
