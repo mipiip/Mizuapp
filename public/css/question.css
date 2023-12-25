@@ -14,7 +14,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    margin: 0;
+    width: 60%;
+    margin: 0 auto;
     
 }
  
@@ -65,8 +66,7 @@ button[type="submit"]:hover {
     background-color: #E98FB5;
 }
 
-
 .question-form {
-    text-align: center;
-    width: 60%;
+    width: 50%;
+    margin: 0 auto;
 }
