@@ -23,12 +23,11 @@
         @endif
         <p>総合得点： {{ $totalScore }}</p>
         
-        <div>
-            あなたの順位: {{ $userRank }} / {{ count($rankingData) }}
-        </div>
+        <p>あなたの順位: {{ $userRank }} / {{ count($rankingData) }}</p>
         
-        <div>
-            <p>ランキング</p>
+        
+        <div class="ranking">
+            <h2>ランキング</h2>
             @foreach($rankingData->take(5) as $index => $rank)
                 <p>{{ $index + 1 }}位: {{ $rank->name }}</p>
                 <img class="pro-img" src="{{ $rank->profile_image_url }}" alt="{{ $rank->name }}のプロフィール画像">
