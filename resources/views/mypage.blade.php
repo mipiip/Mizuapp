@@ -19,7 +19,7 @@
         @if(Auth::user()->profile_image_url)
                     <img class ="pro-img" src="{{ Auth::user()->profile_image_url }}" alt="プロフィール画像">
         @else
-            <img src="{{ asset('profile_images/default.jpg') }}" alt="デフォルト画像">
+            <img src="{{ asset('profile_images/default.jpg') }}" alt="noimage">
         @endif
         <p>総合得点： {{ $totalScore }}</p>
         
@@ -31,7 +31,7 @@
             <p>ランキング</p>
             @foreach($rankingData->take(5) as $index => $rank)
                 <p>{{ $index + 1 }}位: {{ $rank->name }}</p>
-                <img class ="pro-img" src="{{ Auth::user()->profile_image_url }}" alt="プロフィール画像">
+                <img class="pro-img" src="{{ $rank->profile_image_url }}" alt="{{ $rank->name }}のプロフィール画像">
             @endforeach
         </div>
         
