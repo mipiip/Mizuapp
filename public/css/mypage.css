@@ -38,6 +38,12 @@ p {
     padding-top: 20px;
     
 }
+
+.rank-item{
+    align-items: center; 
+    margin-right: 20px;
+}
+
 #totalScore {
     color: #4CAF50;
     font-size: 24px;

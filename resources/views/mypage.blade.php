@@ -29,8 +29,10 @@
         <div class="ranking">
             <h2>ランキング</h2>
             @foreach($rankingData->take(5) as $index => $rank)
-                <p>{{ $index + 1 }}位: {{ $rank->name }}</p>
-                <img class="pro-img" src="{{ $rank->profile_image_url }}" alt="{{ $rank->name }}のプロフィール画像">
+                <div class="rank-item">
+                    <p>{{ $index + 1 }}位: {{ $rank->name }}</p>
+                    <img class="pro-img" src="{{ $rank->profile_image_url }}" alt="{{ $rank->name }}のプロフィール画像">
+                </div>
             @endforeach
         </div>
         
